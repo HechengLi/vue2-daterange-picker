@@ -200,10 +200,6 @@
       opens: {
         type: String,
         default: 'center'
-      },
-      onClose: {
-        type: Function,
-        default: function() {}
       }
     },
     data () {
@@ -426,11 +422,6 @@
           if (value.endDate) {
             this.end = new Date(value.endDate);
           }
-        }
-      },
-      open (value, oldValue) {
-        if (oldValue && !value) {
-          this.onClose()
         }
       }
     }
